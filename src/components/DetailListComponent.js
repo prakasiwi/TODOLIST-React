@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Table } from "reactstrap";
+import axios from 'axios'
 
 const mapStateToProps = (state) => {
   return {
@@ -8,17 +9,30 @@ const mapStateToProps = (state) => {
     errorDetailList: state.lists.errorDetailList,
   };
 };
+
+const handleClick = () => {
+  axios.get('https://virtserver.swaggerhub.com/hanabyan/todo/1.0.0/to-do-list')
+  .then(response => console.log(response))
+}
 const DetailListComponent = (props) => {
     return (
         <Table striped>
+          <div>
+        {/* <button>CEK</button> */}
+      </div>
       <tbody>
+      <tr>
+          <td width="200">ID</td>
+          <td width="10">:</td>
+          <td>{props.getDetailList.id}</td>
+        </tr>
         <tr>
           <td width="200">Title</td>
           <td width="10">:</td>
           <td>{props.getDetailList.title}</td>
         </tr>
         <tr>
-          <td width="200">Alamat</td>
+          <td width="200">Description</td>
           <td width="10">:</td>
           <td>{props.getDetailList.description}</td>
         </tr>

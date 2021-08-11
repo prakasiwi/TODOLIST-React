@@ -16,7 +16,7 @@ export const getLists = () => {
             errorMessage: false,
           }
       })
-    })
+    }, [])
     .catch(function (error) {
         dispatch({
             type: GET_LISTS,

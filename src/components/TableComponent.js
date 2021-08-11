@@ -71,6 +71,11 @@ const TableComponent = (props) => {
       sort: true,
     },
     {
+      dataField: "createdAt",
+      text: "CreatedAt",
+      sort: true,
+    },
+    {
       dataField: "link",
       text: "Action",
       formatter: (rowContent, row) => {

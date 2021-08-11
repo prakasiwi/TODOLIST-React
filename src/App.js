@@ -7,7 +7,7 @@ import DetailListContainer from './container/DetailListContainer';
 import EditListContainer from './container/EditListContainer';
 
 export default class App extends Component {
-
+  
   render() {
     return (
       <div>

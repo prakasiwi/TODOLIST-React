@@ -37,6 +37,7 @@ const renderField = ({
 const mapStateToProps = (state) => {
   return {
     initialValue : {
+      id : state.lists.getDetailList.id,
       title : state.lists.getDetailList.title,
       description : state.lists.getDetailList.description,
       status : state.lists.getDetailList.status,

@@ -10,6 +10,8 @@ import { Provider } from "react-redux";
 import reducer from "./reducers";
 import thunk from "redux-thunk";
 
+//const createStore = redux.createStore;
+
 const store = createStore(
   reducer,
   compose(
